@@ -1,0 +1,37 @@
+#content {
+    article {
+      h1 { color: #333 }
+      p { margin-bottom: 1.4em }
+    }
+    aside { background-color: #EEE }
+  }
+$highlight-color: #F90;
+.selected {
+  border: 1px solid $highlight-color;
+  background: linear-gradient(red, yellow); /* 标准的语法 */
+  animation: 1s keyname infinite;//时间 动画名 次数
+  display: flex;
+}
+@keyframes keyname{
+//设置关键帧
+  0% { background: #c00; }
+  50% { background: orange; }
+  100% { background: yellowgreen; }
+}
+@keyframes mymove
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+.move{
+  width:100px;
+	height:100px;
+	background:#f00;
+  animation:mymove 5s infinite;
+}
+.box-orient{
+  -webkit-line-clamp: 3;
+  /*! autoprefixer:innore next */
+  -webkit-box-orient: vertical;//autoprefixer自动删除此样式
+  overflow: hidden;
+}
